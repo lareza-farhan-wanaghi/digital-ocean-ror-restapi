@@ -1,16 +1,6 @@
 {
     "version": 2,
-    "builds": [
-      {
-        "src": "config.ru",
-        "use": "@vercel/ruby"
-      }
-    ],
-    "build": {
-      "env": {
-        "RUBY_VERSION": "2.7.8"
-      }
-    },
+
     "buildCommand": "gem install bundler && bundler install",
     "routes": [
       {
