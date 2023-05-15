@@ -1,0 +1,22 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "config.ru",
+        "use": "@vercel/ruby"
+      }
+    ],
+    "build": {
+      "env": {
+        "RUBY_VERSION": "2.5.9"
+      },
+      "command": "bundle install && bundle exec rake assets:precompile"
+    },
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "config.ru"
+      }
+    ]
+  }
+  
