@@ -1,5 +1,12 @@
 {
   "version": 2,
+  "builds": [
+    {
+      "src": "config.ru",
+      "use": "@vercel/ruby"
+    }
+  ],
+  "buildCommand":"bundler install",
   "routes": [
     {
       "src": "/(.*)",
