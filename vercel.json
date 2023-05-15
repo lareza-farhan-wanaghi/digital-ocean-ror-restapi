@@ -8,10 +8,10 @@
     ],
     "build": {
       "env": {
-        "RUBY_VERSION": "2.5.9"
-      },
-      "command": "bundle install && bundle exec rake assets:precompile"
+        "RUBY_VERSION": "2.7.8"
+      }
     },
+    "buildCommand": "bundler install",
     "routes": [
       {
         "src": "/(.*)",
