@@ -1,22 +1,19 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "config.ru",
-        "use": "@vercel/ruby"
-      }
-    ],
-    "build": {
-      "env": {
-        "RUBY_VERSION": "2.7.8"
-      }
-    },
-    "buildCommand": "gem install bundler && bundler install",
-    "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "config.ru"
-      }
-    ]
+  "version": 2,
+  "builds": [
+    {
+      "src": "config.ru",
+      "use": "@vercel/ruby"
+    }
+  ],
+  "build": {
+    "env": {
+      "RUBY_VERSION": "2.7.8"
+    }
+  },
+  "functions": {
+    "api/**/*.rb": {
+      "runtime": "vercel-ruby@1.0.0"
+    }
   }
-  
+}
