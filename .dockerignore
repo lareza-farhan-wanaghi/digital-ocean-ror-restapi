@@ -1,0 +1,16 @@
+# Ignore development and test-specific files
+/config/credentials/*.key
+/log/*
+/tmp/*
+/db/*.sqlite3
+/db/*.sqlite3-journal
+/public/packs
+/public/assets
+/node_modules
+/yarn-error.log
+
+# Ignore system and editor files
+*.swp
+.DS_Store
+.idea/
+.vscode/

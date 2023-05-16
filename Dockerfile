@@ -7,7 +7,7 @@ ENV RAILS_LOG_TO_STDOUT=true
 
 # Install dependencies
 RUN apt-get update -qq && \
-    apt-get install -y nodejs sqlite3
+    apt-get install -y sqlite3
 
 # Set working directory
 WORKDIR /app

@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "5e107c51-c5a2-44e0-bfed-30034bd1e03a",
-		"name": "RoR DIgital Ocean",
+		"name": "DIgital Ocean RoR RestAPI",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "12961186"
 	},
@@ -42,9 +42,9 @@
 							]
 						},
 						"url": {
-							"raw": "{{local}}/auth/login",
+							"raw": "{{host}}/auth/login",
 							"host": [
-								"{{local}}"
+								"{{host}}"
 							],
 							"path": [
 								"auth",
@@ -97,9 +97,9 @@
 							]
 						},
 						"url": {
-							"raw": "{{local}}/signup",
+							"raw": "{{host}}/signup",
 							"host": [
-								"{{local}}"
+								"{{host}}"
 							],
 							"path": [
 								"signup"
@@ -125,12 +125,18 @@
 							}
 						],
 						"url": {
-							"raw": "{{local}}/todos",
+							"raw": "{{host}}/todos?page=1",
 							"host": [
-								"{{local}}"
+								"{{host}}"
 							],
 							"path": [
 								"todos"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								}
 							]
 						}
 					},
@@ -148,9 +154,9 @@
 							}
 						],
 						"url": {
-							"raw": "{{local}}/todos/:id",
+							"raw": "{{host}}/todos/:id",
 							"host": [
-								"{{local}}"
+								"{{host}}"
 							],
 							"path": [
 								"todos",
@@ -182,15 +188,15 @@
 							"formdata": [
 								{
 									"key": "title",
-									"value": "Beathover",
+									"value": "test",
 									"type": "text"
 								}
 							]
 						},
 						"url": {
-							"raw": "{{local}}/todos",
+							"raw": "{{host}}/todos",
 							"host": [
-								"{{local}}"
+								"{{host}}"
 							],
 							"path": [
 								"todos"
@@ -221,9 +227,9 @@
 							]
 						},
 						"url": {
-							"raw": "{{local}}/todos/:id",
+							"raw": "{{host}}/todos/:id",
 							"host": [
-								"{{local}}"
+								"{{host}}"
 							],
 							"path": [
 								"todos",
@@ -251,9 +257,9 @@
 							}
 						],
 						"url": {
-							"raw": "{{local}}/todos/:id",
+							"raw": "{{host}}/todos/:id",
 							"host": [
-								"{{local}}"
+								"{{host}}"
 							],
 							"path": [
 								"todos",
@@ -262,7 +268,7 @@
 							"variable": [
 								{
 									"key": "id",
-									"value": "1"
+									"value": "2"
 								}
 							]
 						}
@@ -286,9 +292,9 @@
 							}
 						],
 						"url": {
-							"raw": "{{local}}/todos/:id/items",
+							"raw": "{{host}}/todos/:id/items",
 							"host": [
-								"{{local}}"
+								"{{host}}"
 							],
 							"path": [
 								"todos",
@@ -298,7 +304,7 @@
 							"variable": [
 								{
 									"key": "id",
-									"value": "2"
+									"value": "1"
 								}
 							]
 						}
@@ -317,9 +323,9 @@
 							}
 						],
 						"url": {
-							"raw": "{{local}}/todos/:todo_id/items/:id",
+							"raw": "{{host}}/todos/:todo_id/items/:id",
 							"host": [
-								"{{local}}"
+								"{{host}}"
 							],
 							"path": [
 								"todos",
@@ -368,9 +374,9 @@
 							]
 						},
 						"url": {
-							"raw": "{{local}}/todos/:id/items",
+							"raw": "{{host}}/todos/:id/items",
 							"host": [
-								"{{local}}"
+								"{{host}}"
 							],
 							"path": [
 								"todos",
@@ -380,7 +386,7 @@
 							"variable": [
 								{
 									"key": "id",
-									"value": "2"
+									"value": "1"
 								}
 							]
 						}
@@ -414,9 +420,9 @@
 							]
 						},
 						"url": {
-							"raw": "{{local}}/todos/:todo_id/items/:id",
+							"raw": "{{host}}/todos/:todo_id/items/:id",
 							"host": [
-								"{{local}}"
+								"{{host}}"
 							],
 							"path": [
 								"todos",
@@ -427,7 +433,7 @@
 							"variable": [
 								{
 									"key": "todo_id",
-									"value": "2"
+									"value": "1"
 								},
 								{
 									"key": "id",
@@ -450,9 +456,9 @@
 							}
 						],
 						"url": {
-							"raw": "{{local}}/todos/:todo_id/items/:id",
+							"raw": "{{host}}/todos/:todo_id/items/:id",
 							"host": [
-								"{{local}}"
+								"{{host}}"
 							],
 							"path": [
 								"todos",
@@ -463,7 +469,7 @@
 							"variable": [
 								{
 									"key": "todo_id",
-									"value": "2"
+									"value": "1"
 								},
 								{
 									"key": "id",
@@ -499,7 +505,7 @@
 	],
 	"variable": [
 		{
-			"key": "local",
+			"key": "host",
 			"value": "localhost:3000",
 			"type": "string"
 		},
