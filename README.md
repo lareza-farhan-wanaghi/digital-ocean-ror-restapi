@@ -16,21 +16,21 @@ This repository contains the Rails app I made to complete the tutorial series. T
 - Language: [Ruby 2.5.9](https://www.ruby-lang.org/en/news/2021/04/05/ruby-2-5-9-released/)
 - API: [Rails](https://rubyonrails.org/)
 - DB: [Sqlite3](https://sqlite.org/index.html)
-- Testing: [Rspec] (https://github.com/rspec/rspec-rails)
-- Authentication: [JWT] (https://github.com/jwt/ruby-jwt)
+- Testing: [Rspec](https://github.com/rspec/rspec-rails)
+- Authentication: [JWT](https://github.com/jwt/ruby-jwt)
 
 ### Additional Resources
 
 Here are some additional resources to help you understand more about the app contained in this repository:
 
-- You can visit the [Railway app](https://digital-ocean-ror-restapi-production.up.railway.app/) I have created to see the sample of the production deployment.
+- Visit the [Railway app](https://digital-ocean-ror-restapi-production.up.railway.app/) I have created to see the sample of a production environment deployed app.
 
-- Use this [Postman collection](https://elements.getpostman.com/redirect?entityId=12961186-5e107c51-c5a2-44e0-bfed-30034bd1e03a&entityType=collection) to test the API (I also have included the [exported file](Digital Ocean RoR RestAPI.postman_collection.json)).
+- Use this [Postman collection](https://elements.getpostman.com/redirect?entityId=12961186-5e107c51-c5a2-44e0-bfed-30034bd1e03a&entityType=collection) to test the APIs (you can also find the exported file in the root folder).
 
 - The below image is the database design of the models created throughout the series.
 <br><br>
 ![database-design](database-design.jpeg)
 
 ### Conclusion
-In conclusion, this tutorial series has provided me with valuable insights into building a REST API application using the Ruby on Rails framework, giving me a deeper understanding of its internal database management, routing implementation, and folder structure. The series also introduced me to useful packages and best practices that might be crucial for developing Rails applications effectively. Moreover, the TDD (Test-Driven Development) part is quite new to me, and the series explained it pretty well, providing me with a more robust understanding and an idea to implement it. Overall, this series serves as an excellent resource for anyone embarking on a journey as a backend engineer with Ruby on Rails.
+In conclusion, this tutorial series has provided me with valuable insights into building a REST API application using the Ruby on Rails framework, giving me a deeper understanding of its internal database management, routing implementation, and folder structure. The series also introduced me to useful packages and best practices that might be crucial for developing Rails applications effectively. Moreover, the TDD (Test-Driven Development) part is quite new to me, and the series explained it pretty well, providing me with a more robust understanding and an idea to implement it. Overall, I believe this series serves as an excellent resource for anyone embarking on a journey as a backend engineer with Ruby on Rails.
  
