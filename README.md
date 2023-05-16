@@ -25,7 +25,7 @@ Here are some additional resources to help you understand more about the app con
 
 - You can visit the [Railway app](https://digital-ocean-ror-restapi-production.up.railway.app/) I have created to see the sample of the production deployment.
 
-- Use this [Postman collection](https://elements.getpostman.com/redirect?entityId=12961186-5e107c51-c5a2-44e0-bfed-30034bd1e03a&entityType=collection) to test the API (I also have included the [exported file](Digital Ocean RoR RestAPI.postman_collection)).
+- Use this [Postman collection](https://elements.getpostman.com/redirect?entityId=12961186-5e107c51-c5a2-44e0-bfed-30034bd1e03a&entityType=collection) to test the API (I also have included the [exported file](Digital Ocean RoR RestAPI.postman_collection.json)).
 
 - The below image is the database design of the models created throughout the series.
 <br><br>
