@@ -16,7 +16,7 @@ WORKDIR /app
 COPY Gemfile Gemfile.lock ./
 
 ## Install gems
-RUN gem install bundler
+RUN gem install bundler -v 2.3.26
 RUN bundle install --without development test
 
 # Copy the rest of the application code
