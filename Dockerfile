@@ -7,7 +7,7 @@ ENV RAILS_LOG_TO_STDOUT=true
 
 # Install dependencies
 RUN apt-get update -qq && \
-    apt-get install -y nodejs postgresql-client
+    apt-get install -y nodejs sqlite3
 
 # Set working directory
 WORKDIR /app
@@ -21,6 +21,9 @@ RUN bundle install --without development test
 
 # Copy the rest of the application code
 COPY . .
+
+# Migrate the database
+RUN bundle exec rails db:migrate
 
 # # Precompile assets (if needed)
 # RUN rails assets:precompile
