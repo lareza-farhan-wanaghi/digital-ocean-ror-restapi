@@ -12,7 +12,7 @@ Lastly, the [third part](https://www.digitalocean.com/community/tutorials/build-
 
 ## What's in this Repository?
 
-This repository contains the Rails app I made to complete the tutorial series. The specs of the app can be seen below:
+This repository contains the Rails app I made while completing the tutorial series. The specs of the app can be seen below:
 - Language: [Ruby 2.5.9](https://www.ruby-lang.org/en/news/2021/04/05/ruby-2-5-9-released/)
 - API: [Rails](https://rubyonrails.org/)
 - DB: [Sqlite3](https://sqlite.org/index.html)
