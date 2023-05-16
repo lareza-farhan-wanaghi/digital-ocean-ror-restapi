@@ -6,7 +6,7 @@ Welcome to my repository showcasing the culmination of my work on following the 
 
 In the [first part](https://www.digitalocean.com/community/tutorials/build-a-restful-json-api-with-rails-5-part-one), the focus lies on setting up a Rails project using a Test-Driven Development (TDD) approach. The tutorial demonstrates the utilization of the RSpec testing framework, along with supporting frameworks like Factory Bot, Database Cleaner, Shoulda Matchers, and Faker.
 
-The [second part]((https://www.digitalocean.com/community/tutorials/build-a-restful-json-api-with-rails-5-part-one)) delves into the implementation of token-based authentication using JWT (JSON Web Tokens). This section provides valuable insights into securing API endpoints and managing user authentication.
+The [second part](https://www.digitalocean.com/community/tutorials/build-a-restful-json-api-with-rails-5-part-one) delves into the implementation of token-based authentication using JWT (JSON Web Tokens). This section provides valuable insights into securing API endpoints and managing user authentication.
 
 Lastly, the [third part](https://www.digitalocean.com/community/tutorials/build-a-restful-json-api-with-rails-5-part-one) encompasses essential topics such as versioning, serializers, and pagination. By incorporating these concepts, the tutorial equips developers with the necessary knowledge to enhance the functionality and scalability of their Rails projects.
 
