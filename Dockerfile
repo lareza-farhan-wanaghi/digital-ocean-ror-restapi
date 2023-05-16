@@ -1,7 +1,9 @@
 # Base image
 FROM ruby:2.7.8
 
+
 # Set up environment variables
+ENV RAILS_MASTER_KEY=$RAILS_MASTER_KEY
 ENV RAILS_ENV=production
 ENV RAILS_LOG_TO_STDOUT=true
 
