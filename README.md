@@ -23,7 +23,7 @@ This repository contains the Rails app I made while completing the tutorial seri
 
 Here are some additional resources to help you understand more about the app contained in this repository:
 
-- Visit the [Railway app](https://digital-ocean-ror-restapi-production.up.railway.app/) I have created to see the sample of a production environment deployed app.
+- Visit the [Railway app](https://digital-ocean-ror-restapi-production.up.railway.app/) I have created to explore a sample of the deployed app in a production environment.
 
 - Use this [Postman collection](https://elements.getpostman.com/redirect?entityId=12961186-5e107c51-c5a2-44e0-bfed-30034bd1e03a&entityType=collection) to test the APIs (you can also find the exported file in the root folder).
 
