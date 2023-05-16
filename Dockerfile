@@ -1,5 +1,5 @@
 # Base image
-FROM ruby:2.7.8
+FROM ruby:2.5.9
 
 # Set up environment variables
 ENV RAILS_ENV=production
