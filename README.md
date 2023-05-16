@@ -29,7 +29,7 @@ Here are some additional resources to help you understand more about the app con
 
 - The below image is the database design of the models created throughout the series.
 <br><br>
-![database-design](database-design.png)
+![database-design](database-design.jpeg)
 
 ### Conclusion
 In conclusion, this tutorial series has provided me with valuable insights into building a REST API application using the Ruby on Rails framework, giving me a deeper understanding of its internal database management, routing implementation, and folder structure. The series also introduced me to useful packages and best practices that might be crucial for developing Rails applications effectively. Moreover, the TDD (Test-Driven Development) part is quite new to me, and the series explained it pretty well, providing me with a more robust understanding and an idea to implement it. Overall, this series serves as an excellent resource for anyone embarking on a journey as a backend engineer with Ruby on Rails.
