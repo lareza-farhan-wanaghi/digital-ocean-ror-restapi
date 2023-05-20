@@ -17,9 +17,9 @@ The project employs the Ruby on Rails framework, a well-known web application fr
 
 ### Data Flow
 
-The data flow within the application begins with user authentication using the token-based JWT method. Upon successful authentication, the process proceeds to subsequent stages of an individual route handler. In case of invalid authentication, an exception is raised and handled by a custom exception handler. This authentication process is applied to most APIs, excluding user login and registration APIs.
+The data flow within the application begins with user authentication using the token-based JWT method. Upon successful authentication, the process proceeds to subsequent stages of individual route handling. In case of invalid authentication, an exception is raised and handled by a custom exception handler. This authentication process is applied to most APIs, excluding user login and registration APIs.
 
-All available APIs interact with the database to retrieve, store, update, and delete data before responding to requests. When storing new data (excluding user data), it is associated with the current authenticated user. A comprehensive list of available APIs can be found in this [Postman collection](https://elements.getpostman.com/redirect?entityId=12961186-5e107c51-c5a2-44e0-bfed-30034bd1e03a&entityType=collection).
+All available APIs interact with the database to retrieve, store, update, or delete data before responding to requests. When storing new data (excluding user data), it is associated with the current authenticated user. A comprehensive list of available APIs can be found in this [Postman collection](https://elements.getpostman.com/redirect?entityId=12961186-5e107c51-c5a2-44e0-bfed-30034bd1e03a&entityType=collection).
 
 
 ### Project Structure
