@@ -53,6 +53,6 @@ group :test do
 end
 
 gem 'bcrypt'
-gem 'jwt'
+gem 'jwt', '~> 2.7.0'
 gem 'active_model_serializers'
 gem 'will_paginate'
