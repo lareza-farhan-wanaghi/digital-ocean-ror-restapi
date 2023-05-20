@@ -264,7 +264,7 @@ DEPENDENCIES
   database_cleaner
   factory_bot_rails (~> 4.0)
   faker
-  jwt
+  jwt (~> 2.7.0)
   listen (~> 3.3)
   puma (~> 5.0)
   rails (~> 6.1.7, >= 6.1.7.3)
