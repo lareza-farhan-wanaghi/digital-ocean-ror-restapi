@@ -25,7 +25,7 @@ All available APIs interact with the database to retrieve, store, update, or del
 ### Project Structure
 
 The project follows the default structure provided by the Ruby on Rails framework, with additional custom folders for testing purposes. The following folders are of particular importance:
-- **'/app/controllers'**: This folder contains the routing implementation. The routes are versioned using the **'V1'** and **'V2'** subfolders (though in this case, a full API implementation is only provided for the V1 version). The **'concerns'** folder includes helper functions for exception handling and responding to requests with JSON data.
+- **'/app/controllers'**: This folder contains the route handling implementation. The routes are versioned using the **'V1'** and **'V2'** subfolders (though in this case, a full API implementation is only provided for the V1 version). The **'concerns'** folder includes helper functions for exception handling and responding to requests with JSON data.
 - **'/app/auth'**: This folder contains the authentication implementation, including user authentication using IDs and passwords, as well as user validation based on the provided JWT token.
 - **'/spec'**: This folder contains the test implementations. The **'auth'**, **'controllers'**, and **'requests'** subfolders contain test cases for authentication, pre-request/middleware handling, and request handling for each API. The **'models'** folder ensures the appropriate format of models used in the tests.
 - **'/config'**: This folder stores configuration data, including database connection settings, routing maps, and environment variables for different deployment stages.
