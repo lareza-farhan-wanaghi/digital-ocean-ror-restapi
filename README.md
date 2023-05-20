@@ -2,7 +2,7 @@
 ![Completion status: completed](https://img.shields.io/badge/COMPLETION%20STATUS-COMPLETED-success?style=for-the-badge)
 ## Introduction
 
-This document presents a project created as part of the **"Digital Ocean - Build a RESTful JSON API With Rails 5"** tutorial series by Austin Kabiru, available on DigitalOcean (series links: [part-one](https://www.digitalocean.com/community/tutorials/build-a-restful-json-api-with-rails-5-part-one), [part-two](https://www.digitalocean.com/community/tutorials/build-a-restful-json-api-with-rails-5-part-two), [part-three](https://www.digitalocean.com/community/tutorials/build-a-restful-json-api-with-rails-5-part-three)). The project consists of a RESTful API application that enables users to create and manage personal to-do lists efficiently.
+This repository presents a project created as part of the **"Digital Ocean - Build a RESTful JSON API With Rails 5"** tutorial series by Austin Kabiru, available on DigitalOcean (series links: [part-one](https://www.digitalocean.com/community/tutorials/build-a-restful-json-api-with-rails-5-part-one), [part-two](https://www.digitalocean.com/community/tutorials/build-a-restful-json-api-with-rails-5-part-two), [part-three](https://www.digitalocean.com/community/tutorials/build-a-restful-json-api-with-rails-5-part-three)). The project consists of a RESTful API application that enables users to create and manage personal to-do lists efficiently.
 
 The project utilizes the API-only version of the Ruby on Rails (RoR) framework as the foundation for the API. It also incorporates the RSpec framework for custom testing, ensuring the reliability and accuracy of the application. The project's specifications are as follows (further details can be found in the included **'Gemfile'**):
 - Language: [Ruby 2.5.9](https://www.ruby-lang.org/en/news/2021/04/05/ruby-2-5-9-released/) 
@@ -42,7 +42,7 @@ The RSpec framework is employed to implement a test-driven development (TDD) app
 
 ### Deployment
 
-The production application is hosted on Railway (app link: [deployed app](https://digital-ocean-ror-restapi-production.up.railway.app/)). The project's source code is integrated with Railway App via GitHub, allowing automatic deployment whenever changes are pushed to the source code repository. Notably, the deployment process involves recreating the project's database. Dockerfile is employed for Railway to build the project. The Railway configuration can be found in **'railway.json'**, and the **'Dockerfile'** file specifies the build process. Furthermore, a custom environment variable is added in Railway to specify the project's master key without including the master.key file in the source code.
+The production application is hosted on Railway (app link: [deployed app](https://digital-ocean-ror-restapi-production.up.railway.app/)). The project's source code is integrated with Railway App via GitHub, allowing automatic deployment whenever changes are pushed to the source code repository (note that the deployment process involves recreating the project's database for now). Dockerfile is employed for Railway to build the project. The Railway configuration can be found in **'railway.json'**, and the **'Dockerfile'** file specifies the build process. Furthermore, a custom environment variable is added in Railway to specify the project's master key without including the master.key file in the source code.
 <br><br>
 ![custom-env](custom-env.png)
 
