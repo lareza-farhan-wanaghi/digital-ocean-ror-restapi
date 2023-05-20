@@ -1,36 +1,53 @@
 # Digital Ocean - Build a RESTful JSON API With Rails 5
-
 ![Completion status: completed](https://img.shields.io/badge/COMPLETION%20STATUS-COMPLETED-success?style=for-the-badge)
+## Introduction
 
-Welcome to my repository showcasing the culmination of my work on following the "Build a RESTful JSON API With Rails 5" tutorial series by Austin Kabiru, available on DigitalOcean. This tutorial is divided into three comprehensive parts.
+This document presents a project created as part of the **"Digital Ocean - Build a RESTful JSON API With Rails 5"** tutorial series by Austin Kabiru, available on DigitalOcean (the series links: [part-one](https://www.digitalocean.com/community/tutorials/build-a-restful-json-api-with-rails-5-part-one), [part-two](https://www.digitalocean.com/community/tutorials/build-a-restful-json-api-with-rails-5-part-two), [part-three](https://www.digitalocean.com/community/tutorials/build-a-restful-json-api-with-rails-5-part-three)). The project consists of a **RESTful API** application that enables users to create and manage personal **to-do lists** efficiently.
 
-In the [first part](https://www.digitalocean.com/community/tutorials/build-a-restful-json-api-with-rails-5-part-one), the focus lies on setting up a Rails project using a Test-Driven Development (TDD) approach. The tutorial demonstrates the utilization of the RSpec testing framework, along with supporting frameworks like Factory Bot, Database Cleaner, Shoulda Matchers, and Faker.
+The project utilizes the **API-only** version of the **Ruby on Rails (RoR)** framework as the foundation for the API. It also incorporates the **RSpec** framework for custom testing, ensuring the reliability and accuracy of the application. The project's specifications are as follows (further details can be found in the included **'Gemfile'**):
+- Language: [Ruby 2.5.9](https://www.ruby-lang.org/en/news/2021/04/05/ruby-2-5-9-released/) 
+- API Framework: [Rails 6.1.7](https://rubyonrails.org/)
+- Database: [Sqlite3 1.4](https://sqlite.org/index.html)
+- Testing: [RSpec 4.0](https://github.com/rspec/rspec-rails)
+- Authentication: [JWT 2.7.0](https://github.com/jwt/ruby-jwt)
 
-The [second part](https://www.digitalocean.com/community/tutorials/build-a-restful-json-api-with-rails-5-part-one) delves into the implementation of token-based authentication using JWT (JSON Web Tokens). This section provides valuable insights into securing API endpoints and managing user authentication.
+### API Framework Overview
 
-Lastly, the [third part](https://www.digitalocean.com/community/tutorials/build-a-restful-json-api-with-rails-5-part-one) encompasses essential topics such as versioning, serializers, and pagination. By incorporating these concepts, the tutorial equips developers with the necessary knowledge to enhance the functionality and scalability of their Rails projects.
+The project employs the **Ruby on Rails** framework, a well-known web application framework, to streamline development processes. Specifically, the **API-only version** of RoR is utilized to eliminate unnecessary components unrelated to a RESTful API, such as generating view files.
 
-## What's in this Repository?
+### Data Flow
 
-This repository contains the Rails app I made while completing the tutorial series. The specs of the app can be seen below:
-- Language: [Ruby 2.5.9](https://www.ruby-lang.org/en/news/2021/04/05/ruby-2-5-9-released/)
-- API: [Rails 6.1.7](https://rubyonrails.org/)
-- DB: [Sqlite3](https://sqlite.org/index.html)
-- Testing: [Rspec](https://github.com/rspec/rspec-rails)
-- Authentication: [JWT](https://github.com/jwt/ruby-jwt)
+The data flow within the application begins with **user authentication** using the token-based JWT method. Upon successful authentication, the process proceeds to subsequent stages of an **individual route handler**. In case of invalid authentication, an exception is raised and handled by a **custom exception handler**. This authentication process is applied to most APIs, excluding user login and registration APIs.
 
-### Additional Resources
+All available APIs interact with the **database** to retrieve, store, update, and delete data before reponding to requests. When storing new data (excluding user data), it is **associated** with the current authenticated user. A comprehensive list of available APIs can be found in this [Postman collection](https://elements.getpostman.com/redirect?entityId=12961186-5e107c51-c5a2-44e0-bfed-30034bd1e03a&entityType=collection).
 
-Here are some additional resources to help you understand more about the app contained in this repository:
 
-- Visit the [Railway app](https://digital-ocean-ror-restapi-production.up.railway.app/) I have created to explore a sample of the deployed app in a production environment.
+### Project Structure
 
-- Use this [Postman collection](https://elements.getpostman.com/redirect?entityId=12961186-5e107c51-c5a2-44e0-bfed-30034bd1e03a&entityType=collection) to test the APIs (you can also find the exported file in the root folder).
+The project follows the **default structure** provided by the Ruby on Rails framework, with additional custom folders for testing purposes. The following folders are of particular importance:
+- **'/app/controllers'**: This folder contains the **routing** implementation. The routes are **versioned** using the **'V1'** and **'V2'** subfolders (though in this case, the full APIs are only provided for the V1 version). The **'concerns'** folder includes **helper functions** for exception handling and responding to requests with JSON data.
+- **'/app/auth'**: This folder contains the **authentication** implementation, including **user authentication** using IDs and passwords, as well as **user validation** based on the provided JWT token.
+- **'/spec'**: This folder contains the **test** implementations. The **'auth'**, **'controllers'**, and **'requests'** subfolders contain **test cases** for authentication, pre-request/middleware handling, and request handling for each API. The **'models'** folder ensures the appropriate **format of models** used in the tests.
+- **'/config'**: This folder stores **configuration** data, including database connection settings, routing maps, and environment variables for different deployment stages.
 
-- The below image is the database design of the models created throughout the series.
-<br><br>
+### Models and Database
+
+The project utilizes the **SQLite3** database engine, with the database file located in the **'db'** folder. The schema includes three tables: **todos**, **items**, and **users**. The database design corresponding to these tables is illustrated below:<br><br>
+
 ![database-design](database-design.jpeg)
 
+### Testing
+
+The **RSpec** framework is employed to implement a **test-driven development (TDD)** approach in the project. All test cases and testing configurations are located in the **'spec'** folder. To ensure consistent testing environments, the **database cleaner** and **factory bot** libraries are used to recreate and populate the database. Additionally, the **Faker** library generates realistic dummy data for the database.
+
+### Deployment
+
+The production application is hosted on **Railway** (link: [deployed app](https://digital-ocean-ror-restapi-production.up.railway.app/)). The project's source code is **integrated** with Railway App via **GitHub**, allowing automatic deployment whenever changes are pushed to the source code repository. Notably, the deployment process involves **recreating** the project's database. **Dockerfile** is employed for Railway to build the project. The Railway configuration can be found in **'railway.json'**, and the **'Dockerfile'** file specifies the build process. Furthermore, a **custom environment variable** is added in Railway to specify the project's master key without including the master.key file in the source code.
+<br><br>
+![custom-env](custom-env.png)
+
 ### Conclusion
-In conclusion, this tutorial series has provided me with valuable insights into building a REST API application using the Ruby on Rails framework, giving me a deeper understanding of its internal database management, routing implementation, and folder structure. The series also introduced me to useful packages and best practices that might be crucial for developing Rails applications effectively. Moreover, the TDD (Test-Driven Development) part was quite new to me, and the series explained it pretty well, providing me with a more robust understanding and an idea to implement it. Overall, I believe this series serves as an excellent resource for anyone embarking on a journey as a backend engineer with Ruby on Rails.
- 
+
+In conclusion, this documentation provides an overview of the API, data flow, project structure, models and database, as well as testing and deployment aspects of the project developed to complete the "Digital Ocean - Build a RESTful JSON API With Rails 5" tutorial series.
+
+The tutorial series offers valuable insights into building RESTful API applications using the Ruby on Rails framework. It provides a deeper understanding of database management, routing implementation, and folder structure within the framework. I believe this series serves as an excellent resource for anyone aspiring to become a backend engineer proficient in Ruby on Rails.
