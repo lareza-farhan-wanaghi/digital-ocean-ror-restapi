@@ -42,7 +42,7 @@ The RSpec framework is employed to implement a test-driven development (TDD) app
 
 ### Deployment
 
-The production application is hosted on Railway (app link: [deployed app](https://digital-ocean-ror-restapi-production.up.railway.app/)). The project's source code is integrated with Railway App via GitHub, allowing automatic deployment whenever changes are pushed to the source code repository (note that the deployment process involves recreating the project's database for now). Dockerfile is employed for Railway to build the project. The Railway configuration can be found in **'railway.json'**, and the **'Dockerfile'** file specifies the build process. Furthermore, a custom environment variable is added in Railway to specify the project's master key without including the master.key file in the source code.
+The production application is hosted on Railway (app link (no longer maintained): [deployed app](https://digital-ocean-ror-restapi-production.up.railway.app/)). The project's source code is integrated with Railway App via GitHub, allowing automatic deployment whenever changes are pushed to the source code repository (note that the deployment process involves recreating the project's database for now). Dockerfile is employed for Railway to build the project. The Railway configuration can be found in **'railway.json'**, and the **'Dockerfile'** file specifies the build process. Furthermore, a custom environment variable is added in Railway to specify the project's master key without including the master.key file in the source code.
 <br><br>
 ![custom-env](custom-env.png)
 
